@@ -1,0 +1,41 @@
+{
+  "id": "scroll_list",
+  "type": "SharedSlice",
+  "name": "ScrollList",
+  "description": "ScrollList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "scroll_name": {
+          "type": "Text",
+          "config": {
+            "label": "Scroll Name",
+            "placeholder": ""
+          }
+        },
+        "scroll_color": {
+          "type": "Color",
+          "config": {
+            "label": "Scroll Color",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}
