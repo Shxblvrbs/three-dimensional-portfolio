@@ -168,6 +168,10 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ContactBlurbSlice
+  | ContactFormSlice
+  | ImageBlockSlice
+  | TextBlockSlice
   | ExperienceSlice
   | ContentIndexSlice
   | ScrollListSlice
@@ -574,6 +578,111 @@ type BiographySliceVariation = BiographySliceDefault;
 export type BiographySlice = prismic.SharedSlice<
   "biography",
   BiographySliceVariation
+>;
+
+/**
+ * Primary content in *ContactBlurb → Primary*
+ */
+export interface ContactBlurbSliceDefaultPrimary {
+  /**
+   * Heading field in *ContactBlurb → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_blurb.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ContactBlurb → Items*
+ */
+export interface ContactBlurbSliceDefaultItem {
+  /**
+   * Welcome Message field in *ContactBlurb → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_blurb.items[].welcome_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  welcome_message: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactBlurb Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactBlurbSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactBlurbSliceDefaultPrimary>,
+  Simplify<ContactBlurbSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ContactBlurb*
+ */
+type ContactBlurbSliceVariation = ContactBlurbSliceDefault;
+
+/**
+ * ContactBlurb Shared Slice
+ *
+ * - **API ID**: `contact_blurb`
+ * - **Description**: ContactBlurb
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactBlurbSlice = prismic.SharedSlice<
+  "contact_blurb",
+  ContactBlurbSliceVariation
+>;
+
+/**
+ * Primary content in *ContactForm → Primary*
+ */
+export interface ContactFormSliceDefaultPrimary {
+  /**
+   * Button Text field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactFormSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactForm*
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: ContactForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  "contact_form",
+  ContactFormSliceVariation
 >;
 
 /**
@@ -1003,6 +1112,15 @@ declare module "@prismicio/client" {
       BiographySliceDefaultPrimary,
       BiographySliceVariation,
       BiographySliceDefault,
+      ContactBlurbSlice,
+      ContactBlurbSliceDefaultPrimary,
+      ContactBlurbSliceDefaultItem,
+      ContactBlurbSliceVariation,
+      ContactBlurbSliceDefault,
+      ContactFormSlice,
+      ContactFormSliceDefaultPrimary,
+      ContactFormSliceVariation,
+      ContactFormSliceDefault,
       ContentIndexSlice,
       ContentIndexSliceDefaultPrimary,
       ContentIndexSliceVariation,

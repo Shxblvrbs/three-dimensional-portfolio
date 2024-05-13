@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     //background color and text color
     <html lang="en" className = "bg-red-950 text-slate-100">
-      <body className={clsx(urbanist.className, "relative min-h-screen -top-4")}>
+      <body className={clsx(urbanist.className, "relative min-h-screen xl:-top-4 lg:-top-4" )}>
         <Header />
         {children}
         <Footer />

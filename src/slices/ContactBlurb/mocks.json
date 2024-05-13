@@ -1,0 +1,28 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "frequently",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"welcome_message",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "tell",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

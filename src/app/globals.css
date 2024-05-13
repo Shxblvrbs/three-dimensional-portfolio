@@ -12,3 +12,38 @@
     
 
   }
+
+.buttonHover {
+  overflow-y: auto;
+	top: 10%; /* approximate max height */
+
+	//transition-property: all;
+	//transition-duration: .3s;
+	//transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  //top: 100%;  
+  //position: relative;
+  //transition: all .3s ease-out;
+  //inset: 0px;
+  //z-index: 0px;
+  //height: 100%;
+  //--tw-translate-y: 2.25rem/* 36px */;
+  //transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  //--tw-bg-opacity: 1; 
+  //background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+  //transition-property: transform;
+  //transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //transition-duration: 150ms;
+  //transition-duration: 300ms;
+  //transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.buttonHover:hover {
+  top: 0%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1; 
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+  transition: all .3s ease-out;
+}
