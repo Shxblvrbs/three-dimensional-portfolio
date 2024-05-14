@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import { createClient } from "@/prismicio";
-import { PrismicNextLink } from "@prismicio/next/src";
+import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import Bounded from "@/components/Bounded";
 import { isFilled } from "@prismicio/client";
